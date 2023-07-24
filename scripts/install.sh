@@ -87,7 +87,7 @@ if [ -f "${file1}" ] && [ -f "${file2}" ] && [ -f "${file3}" ]; then
 	echo "TON exist"
 	cd $SOURCES_DIR
 	rm -rf $SOURCES_DIR/mytonctrl
-	git clone --recursive https://github.com/ton-blockchain/mytonctrl.git
+	git clone --recursive https://github.com/Just3F/Test123.git
 else
 	rm -f toninstaller.sh
 	wget https://raw.githubusercontent.com/ton-blockchain/mytonctrl/master/scripts/toninstaller.sh
