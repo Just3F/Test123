@@ -3690,7 +3690,8 @@ class MyTonCore():
 
 class TonBlocksScanner():
 	def __init__(self, ton, **kwargs):
-		print("BLOCK SCANNER RUNNED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+		local.AddLog("BLOCK SCANNER RUNNED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", "warning")
+		print("BLOCK SCANNER RUNNED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", "warning")
 		self.ton = ton
 		self.prevMasterBlock = None
 		self.prevShardsBlock = dict()
@@ -3867,6 +3868,7 @@ class TonBlocksScanner():
 
 	def NewBlockReaction(self, block):
 		print(f"{bcolors.green} block: {bcolors.endc} {block}")
+		local.AddLog(f"{bcolors.green} block: {bcolors.endc} {block}", "warning")
 		self.blocksNum += 1
 		if self.nbr:
 			self.StartThread(self.nbr, args=(block,))
@@ -3877,6 +3879,7 @@ class TonBlocksScanner():
 
 	def NewTransReaction(self, trans):
 		print(f"{bcolors.magenta} trans: {bcolors.endc} {self.transNum}", "debug")
+		local.AddLog(f"{bcolors.magenta} trans: {bcolors.endc} {self.transNum}", "warning")
 		self.transNum += 1
 		if self.ntr:
 			self.StartThread(self.ntr, args=(trans,))
