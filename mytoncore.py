@@ -3690,7 +3690,7 @@ class MyTonCore():
 
 class TonBlocksScanner():
 	def __init__(self, ton, **kwargs):
-		local.AddLog("BLOCK SCANNER RUNNED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", "warning")
+		local.AddLog("BLOCK SCANNER RUNNED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ssssssssss", "warning")
 		print("BLOCK SCANNER RUNNED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", "warning")
 		self.ton = ton
 		self.prevMasterBlock = None
@@ -3705,10 +3705,11 @@ class TonBlocksScanner():
 		self.delay = 0
 		self.working = False
 		self.closing = False
+		self.Run()
 	#end define
 
 	def Run(self):
-		local.AddLog("Run started-------------------", "warning")
+		local.AddLog("-------------------Run started-------------------", "warning")
 		self.StartThread(self.ScanBlocks, args=())
 		self.StartThread(self.ThreadBalancing, args=())
 		self.StartThread(self.StatusReading, args=())
