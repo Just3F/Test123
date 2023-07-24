@@ -25,7 +25,7 @@ def Init(argv):
 	console.AddItem("seqno", Seqno, local.Translate("seqno_cmd"))
 	console.AddItem("getconfig", GetConfig, local.Translate("getconfig_cmd"))
 
-	console.AddItem("test", Test123, local.Translate("nw_cmd"))
+	console.AddItem("test22111", Test123, local.Translate("nw_cmd"))
 	console.AddItem("nw", CreatNewWallet, local.Translate("nw_cmd"))
 	console.AddItem("aw", ActivateWallet, local.Translate("aw_cmd"))
 	console.AddItem("wl", PrintWalletsList, local.Translate("wl_cmd"))
@@ -529,7 +529,7 @@ def Seqno(args):
 #end define
 
 def Test123(args):
-	print("Test123123123123")
+	print("Test123123123123!!!!!!!!")
 #end define
 
 def CreatNewWallet(args):
