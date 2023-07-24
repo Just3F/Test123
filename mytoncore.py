@@ -3881,7 +3881,7 @@ class TonBlocksScanner():
 
 	def NewTransReaction(self, trans):
 		print(f"{bcolors.magenta} trans: {bcolors.endc} {self.transNum}", "debug")
-		local.AddLog(f"{bcolors.magenta} trans: {bcolors.endc} {self.transNum}", "warning")
+		local.AddLog(f"{bcolors.magenta} trans: {bcolors.endc} {trans}", "warning")
 		self.transNum += 1
 		if self.ntr:
 			self.StartThread(self.ntr, args=(trans,))
