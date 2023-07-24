@@ -3708,6 +3708,7 @@ class TonBlocksScanner():
 	#end define
 
 	def Run(self):
+		local.AddLog("Run started-------------------", "warning")
 		self.StartThread(self.ScanBlocks, args=())
 		self.StartThread(self.ThreadBalancing, args=())
 		self.StartThread(self.StatusReading, args=())
